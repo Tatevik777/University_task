@@ -4,12 +4,9 @@ import by.tatevik.University_task.service.Actions;
 import by.tatevik.University_task.service.StudentActions;
 
 public class Student extends Teacher implements StudentActions, Actions {
-    public static String name;
-    public static int grade;
 
-    public static void setGrade(int grade) {
-        Student.grade = grade;
-    }
+    public static String name;
+    public int grade;
 
     public String getName() {
         return name;
@@ -24,8 +21,7 @@ public class Student extends Teacher implements StudentActions, Actions {
         if (grade >= 60 && grade <= 100) {
             System.out.println("Ответственный студент " + name);
         } else {
-            System.out.println("Не ответственный студент " + name + ","
-            );
+            System.out.println("Не ответственный студент " + name);
         }
     }
 
@@ -37,37 +33,32 @@ public class Student extends Teacher implements StudentActions, Actions {
                 System.out.println("Экзамен сдал, но в следующий раз надо лучше подготовится" + name);
             }
         } else {
-            System.out.println("Надо договоаривтся с преподавателем о пересдаче " + name + ","
-            );
+            System.out.println("Надо договорится с преподавателем о пересдаче " + name);
         }
     }
 
     @Override
     public void doVolunteerWork() {
-        System.out.println("Отправлен на волонтерскую работу " + name + ","
-        );
+        System.out.println("Отправлен на волонтерскую работу " + name);
     }
 
     @Override
     public void visitLibrary() {
-        System.out.println("Делает конспект в библиотеке" + name + ","
-        );
+        System.out.println("Делает конспект в библиотеке " + name);
     }
 
     @Override
     public void goToUni() {
-        System.out.println("Мчит в универ самый ответственный студент " + name + ",");
+        System.out.println("Мчит в универ самый ответственный студент " + name);
     }
 
     @Override
     public void toGreet() {
-        System.out.println(name + "Приветствует учителя"
-        );
+        System.out.println(name + " Приветствует учителя");
     }
 
     @Override
     public void goToCafe() {
-        System.out.println(name + " Слишклм устал от учебы и пьет какао"
-        );
+        System.out.println(name + " Слишком устал от учебы и пьет какао");
     }
 }

@@ -19,9 +19,10 @@ public class Main {
 
         Student student = new Student();
         student.setName("Дональд Дак");
-        student.setGrade(29);
         student.goToUni();
+        student.toGreet();
         student.doHW();
+        student.grade=30;
         student.toGrade(40, student.getName());
         student.passExam();
         student.doVolunteerWork();
@@ -30,8 +31,7 @@ public class Main {
 
         Student student2 = new Student();
         student2.setName("Микки Маус");
-        student2.setGrade(90);
-        student2.doHW();
-        student2.toGrade(80, student2.getName());
+        student2.grade=90;
+        student2.toGrade(90,student2.getName());
     }
 }
