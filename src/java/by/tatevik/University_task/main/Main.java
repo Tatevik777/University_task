@@ -4,41 +4,34 @@ import by.tatevik.University_task.model.Student;
 import by.tatevik.University_task.model.Teacher;
 import by.tatevik.University_task.model.University;
 
-import java.util.Locale;
-
 public class Main {
     public static void main(String[] args) {
+        University university = new University();
+        university.openUni();
 
-        University university=new University();
-
-
-        Teacher teacher=new Teacher();
-        teacher.name="Лариса Ивановна";
-        teacher.student="Галя";
+        Teacher teacher = new Teacher();
+        teacher.name = "Лариса Ивановна";
         teacher.goToUni();
         teacher.prepareMaterials();
         teacher.doLecture();
-        teacher.toGrade(40);
+        teacher.toGreet();
+        teacher.goToCafe();
 
-        Student student=new Student();
-        student.name="Наташа";
-        student.teacher="Галина Ивановна";
-        student.setGrade(30);
+        Student student = new Student();
+        student.setName("Дональд Дак");
+        student.setGrade(29);
+        student.goToUni();
         student.doHW();
+        student.toGrade(40, student.getName());
+        student.passExam();
+        student.doVolunteerWork();
+        student.visitLibrary();
+        student.goToCafe();
 
-        Student student2=new Student();
-        student2.name="Полина";
-        student2.teacher="Таисия Афанасьевна";
-        student2.setGrade(70);
+        Student student2 = new Student();
+        student2.setName("Микки Маус");
+        student2.setGrade(90);
         student2.doHW();
-
-
-
-
-
-
-
-
-
+        student2.toGrade(80, student2.getName());
     }
 }
