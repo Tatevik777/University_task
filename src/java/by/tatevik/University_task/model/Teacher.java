@@ -4,11 +4,14 @@ import by.tatevik.University_task.service.Actions;
 import by.tatevik.University_task.service.TeacherActions;
 
 public class Teacher implements TeacherActions, Actions {
-
     public String name;
 
+    public void setStudent(String student) {this.student = student;}
+
+    public String student;
+
     @Override
-    public void doLecture() {System.out.println("Преподаватель " + name + " в аудитории и читает лекцию");}
+    public void doLecture() {System.out.println("Преподаватель " + name+ " в аудитории и читает лекцию");}
 
     @Override
     public void toGrade(int grade, String student) {

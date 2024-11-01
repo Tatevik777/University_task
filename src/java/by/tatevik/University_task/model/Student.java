@@ -3,18 +3,13 @@ package by.tatevik.University_task.model;
 import by.tatevik.University_task.service.Actions;
 import by.tatevik.University_task.service.StudentActions;
 
-public class Student extends Teacher implements StudentActions, Actions {
-
-    public static String name;
+public class Student implements StudentActions, Actions {
+    public String name;
+    public String teacher;
     public int grade;
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        Student.name = name;
-    }
+    public void setTeacher(String teacher) {this.teacher = teacher;}
 
     @Override
     public void doHW() {

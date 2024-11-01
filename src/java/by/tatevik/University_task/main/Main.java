@@ -3,35 +3,23 @@ package by.tatevik.University_task.main;
 import by.tatevik.University_task.model.Student;
 import by.tatevik.University_task.model.Teacher;
 import by.tatevik.University_task.model.University;
+import by.tatevik.University_task.service.TeacherActions;
 
 public class Main {
     public static void main(String[] args) {
         University university = new University();
         university.openUni();
 
-        Teacher teacher = new Teacher();
-        teacher.name = "Лариса Ивановна";
-        teacher.goToUni();
-        teacher.prepareMaterials();
-        teacher.doLecture();
-        teacher.toGreet();
-        teacher.goToCafe();
 
-        Student student = new Student();
-        student.setName("Дональд Дак");
-        student.goToUni();
-        student.toGreet();
-        student.doHW();
-        student.grade=30;
-        student.toGrade(40, student.getName());
-        student.passExam();
-        student.doVolunteerWork();
-        student.visitLibrary();
-        student.goToCafe();
+        Teacher teacher1 = new Teacher();
+        Student student1 = new Student();
+        student1.setTeacher("Галина Владимировна");
+        teacher1.setStudent("Маша");
+        student1.name= teacher1.student;
+        teacher1.name=student1.teacher;
 
-        Student student2 = new Student();
-        student2.setName("Микки Маус");
-        student2.grade=90;
-        student2.toGrade(90,student2.getName());
-    }
-}
+
+        student1.toGreet();
+        teacher1.doLecture();
+
+    }}
