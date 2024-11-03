@@ -5,11 +5,16 @@ import by.tatevik.University_task.service.StudentActions;
 
 public class Student implements StudentActions, Actions {
     public String name;
-    public String teacher;
+    public Teacher teacher;
     public int grade;
 
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
 
-    public void setTeacher(String teacher) {this.teacher = teacher;}
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
 
     @Override
     public void doHW() {
@@ -28,7 +33,7 @@ public class Student implements StudentActions, Actions {
                 System.out.println("Экзамен сдал, но в следующий раз надо лучше подготовится" + name);
             }
         } else {
-            System.out.println("Надо договорится с преподавателем о пересдаче " + name);
+            System.out.println("Надо договорится с преподавателем " + teacher.name + " о пересдаче " + name);
         }
     }
 
