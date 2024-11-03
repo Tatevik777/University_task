@@ -10,7 +10,6 @@ public class Main {
         Student student = new Student();
         student.setTeacher(teacher);
         teacher.setStudent(student);
-
         teacher.name = "Галина Александровна";
         student.name = "Скрудж Макдак";
         student.setGrade(20);
