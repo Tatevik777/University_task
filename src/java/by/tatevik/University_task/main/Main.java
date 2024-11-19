@@ -15,7 +15,10 @@ public class Main {
         student.setGrade(20);
         student.grade = teacher.grade;
 
+        teacher.goToUni();
+        student.goToUni();
+
         UniversityService universityService = new UniversityService();
-        universityService.startUniDay(student, teacher);
+        universityService.startDay(teacher,student);
     }
 }

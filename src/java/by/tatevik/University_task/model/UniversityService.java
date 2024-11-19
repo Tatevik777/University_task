@@ -4,24 +4,17 @@ import by.tatevik.University_task.service.Actions;
 import by.tatevik.University_task.service.StudentActions;
 import by.tatevik.University_task.service.TeacherActions;
 
-public class UniversityService {
-    public void openUni() {
-        System.out.println("Университет начинает работу!");
-    }
+import javax.swing.*;
 
-    public void startUniDay(Student student, Teacher teacher) {
-        openUni();
-        teacher.goToUni();
-        student.doHW();
-        teacher.prepareMaterials();
-        teacher.toGreet();
-        student.toGreet();
-        teacher.doLecture();
-        teacher.toGrade();
-        student.passExam();
-        student.visitLibrary();
-        student.doVolunteerWork();
-        teacher.goToCafe();
-        student.goToCafe();
-    }
+public class UniversityService {
+  public void startDay(TeacherActions teacherActions, StudentActions studentActions){
+      teacherActions.prepareMaterials();
+      teacherActions.doLecture();
+      teacherActions.toGrade();
+      studentActions.doHW();
+      studentActions.visitLibrary();
+      studentActions.doVolunteerWork();
+
+  }
+
 }
