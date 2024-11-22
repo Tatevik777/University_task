@@ -4,9 +4,22 @@ import by.tatevik.University_task.service.Actions;
 import by.tatevik.University_task.service.StudentActions;
 
 public class Student implements StudentActions, Actions {
-    public String name;
-    public Teacher teacher;
-    public int grade;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
+    private Teacher teacher;
+
+    public int getGrade() {
+        return grade;
+    }
+
+    private int grade;
 
     public void setGrade(int grade) {
         this.grade = grade;
@@ -33,7 +46,7 @@ public class Student implements StudentActions, Actions {
                 System.out.println("Экзамен сдал, но в следующий раз надо лучше подготовится" + name);
             }
         } else {
-            System.out.println("Надо договорится с преподавателем " + teacher.name + " о пересдаче " + name);
+            System.out.println("Надо договорится с преподавателем " + teacher.getName() + " о пересдаче " + name);
         }
     }
 
