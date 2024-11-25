@@ -1,8 +1,8 @@
-package by.tatevik.University_task.main;
+package by.tatevik.universitytask.main;
 
-import by.tatevik.University_task.model.Student;
-import by.tatevik.University_task.model.Teacher;
-import by.tatevik.University_task.model.UniversityService;
+import by.tatevik.universitytask.model.Student;
+import by.tatevik.universitytask.model.Teacher;
+import by.tatevik.universitytask.entity.UniversityService;
 
 public class Main {
     public static void main(String[] args) {

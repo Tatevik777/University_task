@@ -1,7 +1,7 @@
-package by.tatevik.University_task.model;
+package by.tatevik.universitytask.model;
 
-import by.tatevik.University_task.service.Actions;
-import by.tatevik.University_task.service.StudentActions;
+import by.tatevik.universitytask.entity.Actions;
+import by.tatevik.universitytask.entity.StudentActions;
 
 public class Student implements StudentActions, Actions {
     public String getName() {

@@ -1,9 +1,13 @@
-package by.tatevik.University_task.model;
+package by.tatevik.universitytask.model;
 
-import by.tatevik.University_task.service.Actions;
-import by.tatevik.University_task.service.TeacherActions;
+import by.tatevik.universitytask.entity.Actions;
+import by.tatevik.universitytask.entity.TeacherActions;
 
 public class Teacher implements TeacherActions, Actions {
+    private Student student;
+    private String name;
+    private int grade;
+
     public String getName() {
         return name;
     }
@@ -12,13 +16,9 @@ public class Teacher implements TeacherActions, Actions {
         this.name = name;
     }
 
-    private String name;
-
     public Student getStudent() {
         return student;
     }
-
-    private Student student;
 
     public int getGrade() {
         return grade;
@@ -28,7 +28,6 @@ public class Teacher implements TeacherActions, Actions {
         this.grade = grade;
     }
 
-    private int grade;
 
     public void setStudent(Student student) {
         this.student = student;

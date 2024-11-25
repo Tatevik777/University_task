@@ -1,4 +1,4 @@
-package by.tatevik.University_task.service;
+package by.tatevik.universitytask.entity;
 
 public interface StudentActions {
     void doHW();

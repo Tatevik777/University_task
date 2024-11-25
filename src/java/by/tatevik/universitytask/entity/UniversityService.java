@@ -1,10 +1,4 @@
-package by.tatevik.University_task.model;
-
-import by.tatevik.University_task.service.Actions;
-import by.tatevik.University_task.service.StudentActions;
-import by.tatevik.University_task.service.TeacherActions;
-
-import javax.swing.*;
+package by.tatevik.universitytask.entity;
 
 public class UniversityService {
   public void startDay(TeacherActions teacherActions, StudentActions studentActions){
