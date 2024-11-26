@@ -19,6 +19,6 @@ public class Main {
         student.goToUni();
 
         UniversityService universityService = new UniversityService();
-        universityService.startDay(teacher,student);
+        universityService.startDay(teacher, student);
     }
 }
